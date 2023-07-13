@@ -21,7 +21,9 @@ func main() {
 	
 	envs["CGO_ENABLED"] = "0"
 	envs["BP_GO_BUILD_FLAGS"] = "-buildmode=default"
+	
 
+	// should be the equivalent of  pack build my-app  --buildpack paketo-buildpacks/go  --builder paketobuildpacks/builder-jammy-buildpackless-static 
 	buildOpts := client.BuildOptions{
 		Image:    "pong",
 		Builder:  "paketobuildpacks/builder-jammy-buildpackless-static",
